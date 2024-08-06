@@ -1,3 +1,4 @@
+import Usuario from "./lol";
 function CategoryItem() {
   const categories = [
     {
@@ -67,6 +68,12 @@ function CategoryItem() {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <h1>
+          {" "}
+          <Usuario />
+        </h1>
       </div>
     </>
   );
