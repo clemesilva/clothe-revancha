@@ -3,21 +3,16 @@ import {
   createUserDocumentFromAuth,
   signInWithGoogleRedirect,
 } from "../components/utils/firebase";
+import SignInForm from "../components/form-input/SignInForm";
 import SignUpForm from "../components/form-input/SignUpForm";
-function SignIn() {
-  const logGoogleUser = async () => {
-    const { user } = await signInWithGooglePopup();
-    const userDocRef = await createUserDocumentFromAuth(user);
-  };
 
+function SignIn() {
   return (
-    <>
-      <button onClick={logGoogleUser}>
-        {" "}
-        SignIN with signInWithGooglePopup
-      </button>
+    <div className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-6 justify-center items-center mt-10">
+      <SignInForm />
       <SignUpForm />
-    </>
+    </div>
   );
 }
+
 export default SignIn;
